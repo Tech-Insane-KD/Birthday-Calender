@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Countdown from "./Countdown";
-import githubLogo from "./assets/githubLogo.svg";
+import githubLogo from "../assets/githubLogo.svg";
 import { Link } from "react-router-dom";
 
 const Birthday = ({ name, day, month }) => {
