@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import Countdown from './Countdown';
-import githubLogo from './githubLogo.svg';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import Countdown from "./Countdown";
+import githubLogo from "./assets/githubLogo.svg";
+import { Link } from "react-router-dom";
 
 const Birthday = ({ name, day, month }) => {
   // useState Hooks
@@ -15,7 +15,7 @@ const Birthday = ({ name, day, month }) => {
 
   if (name === undefined || day === undefined || month === undefined) {
     // This is if not enough params are provided
-    name = 'Kuldeep Chaudhary'; // Name of the Person
+    name = "Kuldeep Chaudhary"; // Name of the Person
     month = 9; // Month of the Birthday
     day = 4; // Day of the Birthday
   }
@@ -86,35 +86,35 @@ const Birthday = ({ name, day, month }) => {
 
   let birth = new Date(currentYear, month - 1, day);
   const monthNames = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
   let monthBday = monthNames[birth.getMonth()];
 
   return (
-    <div className='page'>
+    <div className="page">
       <Countdown countdownData={state} name={name} />
       {!isItBday && (
         <>
-          <div className='birthdate'>
+          <div className="birthdate">
             Birth-Date: {day} {monthBday}
           </div>
-          <div className='credits'>
-            <a href='https://github.com/Tech-Insane-KD'>
-              <img src={githubLogo} alt='Github-Logo' className='github-logo' />
+          <div className="credits">
+            <a href="https://github.com/Tech-Insane-KD">
+              <img src={githubLogo} alt="Github-Logo" className="github-logo" />
             </a>
           </div>
-          <Link to='/generate'>Generate Here</Link>
+          <Link to="/generate">Generate Here</Link>
         </>
       )}
     </div>
